@@ -33,7 +33,7 @@ class init {
 
     # Install other packages we need
     package {
-        ["vim", "screen"]:
+        ["git", "vim", "screen"]:
         ensure => installed,
         require => Exec['update-apt']
     }
@@ -49,9 +49,23 @@ class init {
 
     # Install nodejs packages we need
     package {
-        ["nodejs", "npm"]:
+        ["nodejs", "nodejs-legacy", "npm"]:
         ensure => installed,
         require => Exec['update-apt']
+    }
+
+    # Disable any questions during npm-install
+    file { "/etc/environment":
+        content => inline_template("CI=true")
+    }
+
+    # Install angularjs related packages
+    exec { "npm-install-packages":
+        command => "npm install --quiet",
+        tries => 2,
+        timeout => 600,
+        require => Package['nodejs', 'npm'],
+        logoutput => on_failure,
     }
 
 }

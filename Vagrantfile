@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 hosts = {
-  "web" => "192.168.33.33",
+  "numbers" => "192.168.33.33",
 }
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
