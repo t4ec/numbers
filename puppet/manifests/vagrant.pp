@@ -28,14 +28,14 @@ class init {
     package {
         ["python", "python-dev", "python-pip"]:
         ensure => installed,
-        require => Exec['update-apt'] # The system update needs to run first
+        require => Exec['update-apt']
     }
 
     # Install other packages we need
     package {
         ["vim", "screen"]:
         ensure => installed,
-        require => Exec['update-apt'] # The system update needs to run first
+        require => Exec['update-apt']
     }
 
     # Install project dependecies from pip
@@ -45,6 +45,13 @@ class init {
         timeout => 600, # Too long, but this can take awhile
         require => Package['python-pip', 'python-dev'], # The package dependecies needs to run first
         logoutput => on_failure,
+    }
+
+    # Install nodejs packages we need
+    package {
+        ["nodejs", "npm"]:
+        ensure => installed,
+        require => Exec['update-apt']
     }
 
 }

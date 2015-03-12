@@ -11,8 +11,7 @@ hosts = {
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   hosts.each do |name, ip|
     config.vm.define name do |machine|
-      machine.vm.box = "precise64"
-      machine.vm.box_url = "http://files.vagrantup.com/precise64.box"
+      machine.vm.box = "ubuntu/trusty64"
       machine.vm.hostname = "%s.local" % name
       machine.vm.network :private_network, ip: ip
 
