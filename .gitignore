@@ -52,3 +52,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Vagrant
+.sudo_as_admin_successful
+.bash_history
+.cloud-locale-test.skip
+.vagrant/
