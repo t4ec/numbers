@@ -58,3 +58,10 @@ target/
 .bash_history
 .cloud-locale-test.skip
 .vagrant/
+.lesshst
+
+# npm & bower
+.npm/
+.config/
+bower_components/
+node_modules/
