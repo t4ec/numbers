@@ -1,6 +1,7 @@
 from numbers_app import app
+from flask import render_template
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
-    return 'Hello World!'
+    return render_template('index.html')
