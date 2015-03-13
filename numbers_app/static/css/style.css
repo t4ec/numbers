@@ -2,3 +2,12 @@
   text-decoration: line-through;
   color: grey;
 }
+
+.number {
+    float: left;
+    border-style: solid;
+    border-width: 2px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
