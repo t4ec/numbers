@@ -4,19 +4,33 @@
     <script src="/static/lib/angular.min.js"></script>
     <script src="/static/js/numbers_app.js"></script>
     <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   </head>
   <body>
     {% raw %}
     <div ng-app="numbersApp">
+      <div class="container" ng-controller="NumberController" ng-cloak>
+      <div class="alert alert-success text-center" role="alert" ng-if="game_status.win"><h1>Victory</h1></div>
+      <div class="alert alert-danger text-center" role="alert" ng-if="game_status.lost"><h1>Game Over</h1></div>
 
-      <div ng-controller="NumberController">
+      <div class="row buffer">
 
-        <div class="number" ng-repeat="element in array track by $index" ng-click="remove($index)">
-          <h1>{{element}}</h1>
+        <div class="col-xs-3"></div>
+
+        <div class="col-xs-6">
+          <div class="text-center">
+            <button ng-repeat="element in array track by $index" ng-click="remove($index)" type="button" class="btn-default btn-circle">
+              <h4>{{element}}</h4>
+            </button>
+          </div>
         </div>
-      </div>
 
+        <div class="col-xs-3"></div>
+
+      </div>
     </div>
     {% endraw %}
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
   </body>
 </html>

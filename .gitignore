@@ -65,3 +65,6 @@ target/
 .config/
 bower_components/
 node_modules/
+
+# OSX
+.DS_Store

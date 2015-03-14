@@ -1,13 +1,15 @@
-.done-true {
-  text-decoration: line-through;
-  color: grey;
+.buffer {
+    margin-top:80px;
+    margin-bottom: 80px;
 }
 
-.number {
-    float: left;
-    border-style: solid;
-    border-width: 2px;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+.btn-circle {
+  height:100px;
+  width:100px;
+  padding-left:0;
+  padding-right:0;
+  margin: 5px 5px;
+  text-align: center;
+  border-radius: 50%;
+  border: solid;
 }
