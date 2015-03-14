@@ -54,6 +54,13 @@ class init {
         require => Exec['update-apt']
     }
 
+    # Install packages required to run webdriver-manager + chrome
+    package {
+        ["default-jre", "chromium-chromedriver"]:
+        ensure => installed,
+        require => Exec['update-apt']
+    }
+
     # Disable any questions during npm-install
     file { "/etc/environment":
         content => inline_template("CI=true")
