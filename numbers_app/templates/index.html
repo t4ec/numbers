@@ -11,7 +11,7 @@
 
       <div ng-controller="NumberController">
 
-        <div class="number" ng-repeat="element in array track by $index">
+        <div class="number" ng-repeat="element in array track by $index" ng-click="remove($index)">
           <h1>{{element}}</h1>
         </div>
       </div>
