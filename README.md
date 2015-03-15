@@ -1,7 +1,5 @@
 # Numbers
-Simple game
-
-Based on Flask + AngularJS
+Simple game based on Flask & AngularJS
 
 ## Rules
 Remove all duplicate numbers by clicking on them.
@@ -13,7 +11,7 @@ If you remove all duplicates - you win.
 Refresh page to start over.
 
 ## Getting Started
-Clone this repo, change dir to newly created folder.
+Clone this repository, change directory to newly created folder.
 
 Install python requirements:
 ```bash
@@ -21,7 +19,7 @@ pip install -r requirements.txt
 ```
 Install **nodejs** and **npm** if you haven't done it yet.
 
-Install all javascript packages we need:
+Install dependencies:
 ```bash
 npm install
 ```
