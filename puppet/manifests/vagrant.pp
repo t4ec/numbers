@@ -54,12 +54,13 @@ class init {
         require => Exec['update-apt']
     }
 
-    # Install packages required to run webdriver-manager + chrome
+    # Install packages required to run webdriver-manager
     package {
-        ["default-jre", "chromium-chromedriver"]:
+        ["default-jre"]:
         ensure => installed,
         require => Exec['update-apt']
     }
+
 
     # Disable any questions during npm-install
     file { "/etc/environment":
@@ -75,4 +76,12 @@ class init {
         logoutput => on_failure,
     }
 
+    # Install phantomjs
+    exec { "npm install phantomjs --save-dev":
+        command => "npm install phantomjs --save-dev",
+        tries => 2,
+        timeout => 600,
+        require => Package['nodejs', 'npm'],
+        logoutput => on_failure,
+    }
 }

@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   </head>
-  <body>
+  <body ng-app="numbersApp">
     {% raw %}
-    <div ng-app="numbersApp">
+    <div>
       <div class="container" ng-controller="NumberController" ng-cloak>
       <div class="alert alert-success text-center" role="alert" ng-if="game_status.win"><h1>Victory</h1></div>
       <div class="alert alert-danger text-center" role="alert" ng-if="game_status.lost"><h1>Game Over</h1></div>

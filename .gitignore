@@ -59,6 +59,8 @@ target/
 .cloud-locale-test.skip
 .vagrant/
 .lesshst
+/tmp/
+.pki
 
 # npm & bower
 .npm/
