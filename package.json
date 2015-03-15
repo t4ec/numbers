@@ -14,10 +14,12 @@
     "postinstall": "bower install",
 
     "prestart": "npm install",
-    "start": "sudo python ./runserver.py",
+    "start": "python ./runserver.py",
 
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
+
+    "start-webdriver": "webdriver-manager start",
 
     "preprotractor": "npm run update-webdriver",
     "protractor": "protractor e2e_tests/conf.js"

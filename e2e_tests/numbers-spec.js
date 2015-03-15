@@ -61,7 +61,7 @@ describe('Numbers game', function() {
 
 
   beforeEach(function(){
-    browser.get('http://192.168.33.33:5000');
+    browser.get('http://localhost:5000');
   });
 
 
